@@ -81,7 +81,7 @@ export default function SugarBot() {
   const handleSendMessage = async (includeInference = false) => {
     if (!inputValue.trim() || isLoading) return;
 
-    // Add user message and loader assistant message
+    
     const userMessage = { type: 'user', content: inputValue, timestamp: new Date().toISOString() };
     const loaderMessage = { type: 'assistant', content: <TypingLoader />, isLoader: true, timestamp: new Date().toISOString() };
 
@@ -113,7 +113,7 @@ export default function SugarBot() {
       });
       const data = await res.json();
 
-      // Remove loader and add actual assistant response
+      
       setMessages(prev => [
         ...prev.filter(msg => !msg.isLoader),
         { type: 'assistant', content: data.response, timestamp: data.timestamp }
