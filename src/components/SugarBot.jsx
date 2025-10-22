@@ -35,7 +35,7 @@ export default function SugarBot() {
   const messagesEndRef = useRef(null);
   const fileInputRef = useRef(null);
 
-  const API_URL = 'https://sugarbot-backend.onrender.com';
+  const API_URL = 'https://sugarbot-backend-1.onrender.com';
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
